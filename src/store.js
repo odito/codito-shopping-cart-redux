@@ -20,15 +20,11 @@ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ))
 
 
-store.subscribe(throttle(()=>{
-    saveState( {
-        cart:store.getState().cart
-    })
-},1000))
 
-// store.subscribe(throttle(()=>{
-//     saveState( store.getState())
-// },1000))
+
+store.subscribe(throttle(()=>{
+    saveState( store.getState())
+},1000))
 
 
 
